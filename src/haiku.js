@@ -8,4 +8,9 @@ export class Haiku{
     }
     else{return false;}
   }
+  checkSyllables(line){
+    if (line.length<=3){
+      return 1;
+    }
+  }
 }

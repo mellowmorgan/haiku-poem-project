@@ -28,7 +28,7 @@ describe('Haiku', () => {
     expect(notHaiku.checkLines()).toEqual(false);
   });
   test('should return 1 for line 1 of lineArrays of haiku when checkSyllables() called', () => {
-    expect(haiku.linesArray[0].checkSyllables()).toEqual(1);
+    expect(haiku.checkSyllables(haiku.linesArray[0])).toEqual(1);
   });
 
 });
