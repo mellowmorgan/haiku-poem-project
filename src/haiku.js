@@ -6,6 +6,6 @@ export class Haiku{
     if (this.linesArray.length===3){
       return true;
     }
-    // else{return false;}
+    else{return false;}
   }
 }
