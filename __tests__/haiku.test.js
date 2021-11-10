@@ -18,4 +18,13 @@ describe('Haiku', () => {
   test('should return true if array of lines has 3 elements', () => {
     expect(haiku.checkLines()).toEqual(true);
   });
+  test('should return false if array of lines has not 3 elements', () => {
+    const newChunk =  
+    `i like haikus
+    i like you
+    no i don't
+    haha psyche`;
+    const notHaiku = new Haiku(newChunk);
+    expect(notHaiku.checkLines()).toEqual(false);
+  });
 });
