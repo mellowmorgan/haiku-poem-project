@@ -38,5 +38,8 @@ i am baby`;
   test('should return 4 for a line with 4 syllables when checkSyllablesLine(line) called', () => {
     expect(haiku.checkSyllablesLine(haiku.linesArray[2])).toEqual(4);
   });
+  test('should return false for chunk when checkHaiku() is called', () => {
+    expect(haiku.checkHaiku()).toEqual(false);
+  });
 
 });
