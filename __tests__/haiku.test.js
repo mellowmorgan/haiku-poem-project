@@ -27,8 +27,12 @@ describe('Haiku', () => {
     const notHaiku = new Haiku(newChunk);
     expect(notHaiku.checkLines()).toEqual(false);
   });
-  test('should return 1 for line 1 of lineArrays of haiku when checkSyllables() called', () => {
-    expect(haiku.checkSyllables(haiku.linesArray[0])).toEqual(1);
+  test('should return 1 for word with 3 or less characters of when checkSyllablesWord(word) called', () => {
+    expect(haiku.checkSyllablesWord("i")).toEqual(1);
   });
+  test('should return 1 for line with one word with 3 or less characters of when checkSyllablesLine(line) called', () => {
+    expect(haiku.checkSyllablesLine(haiku.linesArray[0])).toEqual(1);
+  });
+
 
 });
