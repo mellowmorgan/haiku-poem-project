@@ -6,7 +6,7 @@ describe('Haiku', () => {
 
   beforeEach(() => {
     const chunk = 
-    `i like haikus
+    `i
     i like you
     no i don't`;
     haiku = new Haiku(chunk);
@@ -27,4 +27,8 @@ describe('Haiku', () => {
     const notHaiku = new Haiku(newChunk);
     expect(notHaiku.checkLines()).toEqual(false);
   });
+  test('should return 1 for line 1 of lineArrays of haiku when checkSyllables() called', () => {
+    expect(haiku.linesArray[0].checkSyllables()).toEqual(1);
+  });
+
 });
