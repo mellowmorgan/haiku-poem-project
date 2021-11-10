@@ -8,7 +8,7 @@ describe('Haiku', () => {
     const chunk = 
     `i
     i like you
-    no i don't`;
+    i am baby`;
     haiku = new Haiku(chunk);
   });
 
@@ -33,6 +33,8 @@ describe('Haiku', () => {
   test('should return 1 for line with one word with 3 or less characters of when checkSyllablesLine(line) called', () => {
     expect(haiku.checkSyllablesLine(haiku.linesArray[0])).toEqual(1);
   });
-
+  test('should return 4 for a line with 4 syllables checkSyllablesLine(line) called', () => {
+    expect(haiku.checkSyllablesLine(haiku.linesArray[2])).toEqual(4);
+  });
 
 });
