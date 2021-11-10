@@ -41,5 +41,12 @@ i am baby`;
   test('should return false for chunk when checkHaiku() is called', () => {
     expect(haiku.checkHaiku()).toEqual(false);
   });
-
+  test('should return true for new chunk when checkHaiku() is called', () => {
+    const newChunk =`
+    I am a commie
+    Jeff thinks I like Trump alot
+    I am mad at Jeff`
+    let newHaiku = new Haiku(newChunk);
+    expect(newHaiku.checkHaiku()).toEqual(true);
+  });
 });
