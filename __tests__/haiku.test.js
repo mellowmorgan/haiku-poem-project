@@ -5,10 +5,9 @@ describe('Haiku', () => {
   let haiku;
 
   beforeEach(() => {
-    const chunk = 
-    `i
-    i like you
-    i am baby`;
+    const chunk=`i
+i like you
+i am baby`;
     haiku = new Haiku(chunk);
   });
 
@@ -34,7 +33,7 @@ describe('Haiku', () => {
     expect(haiku.checkSyllablesLine(haiku.linesArray[0])).toEqual(1);
   });
   test('should return "i am baby" when linesArray(2) is called', () => {
-    expect(haiku.linesArray[2]).toEqual("I am baby");
+    expect(haiku.linesArray[2]).toEqual("i am baby");
   });
   // test('should return 4 for a line with 4 syllables when checkSyllablesLine(line) called', () => {
   //   expect(haiku.checkSyllablesLine(haiku.linesArray[2])).toEqual(4);
