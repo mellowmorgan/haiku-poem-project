@@ -24,15 +24,17 @@ export class Haiku{
     }
     return getSyllablesCount;
   }
-  // checkHaiku(){
+  checkHaiku(){
 
-  //   if (this.checkLines(this.linesArray)){
-  //     if((this.checkSyllablesLine(this.linesArray[0])===5) && (this.checkSyllablesLine(this.linesArray[1])===7) && (this.checkSyllablesLine(this.linesArray[2])===5)){
-  //       return true;
-  //     }
-  //   }
-  //   else{
-  //     false;
-  //   }
-  // }
+    if (this.checkLines(this.linesArray)){
+      if((this.checkSyllablesLine(this.linesArray[0])===5) && (this.checkSyllablesLine(this.linesArray[1])===7) && (this.checkSyllablesLine(this.linesArray[2])===5)){
+        return true;
+      }else{
+        return false;
+      }
+    }
+    else{
+      return false;
+    }
+  }
 } 
