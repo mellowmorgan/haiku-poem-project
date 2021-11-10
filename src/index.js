@@ -4,20 +4,20 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
+
 $("form").submit(function(event){
+  
+  let haiku;
   event.preventDefault();
+  
   let result = $("textarea").val();
-  result = result.split(/[\n\r]+/);
-  console.log(result);
+  haiku = new Haiku(result);
+  const bool = haiku.checkHaiku();
+  if (bool){$("#result").html("This is a haiku!")}
+  else{$("#result").html("This is NOT a haiku!")}
+  $("#counts").append("<p>Line 1 syllables: "+haiku.checkSyllablesLine(haiku.linesArray[0])+"</p>");
+  $("#counts").append("<p>Line 2 syllables: "+haiku.checkSyllablesLine(haiku.linesArray[1])+"</p>");
+  $("#counts").append("<p>Line 3 syllables: "+haiku.checkSyllablesLine(haiku.linesArray[2])+"</p>");
+
 
 });
-const chunk=`i
-i like you
-i am baby`;
-
-let haiku = new Haiku(chunk);
-console.log(haiku.linesArray);
-console.log(haiku.linesArray[2]);
-const babyWord = haiku.checkSyllablesWord("baby");
-console.log("Baby is this many syllables: " + babyWord);
-console.log(haiku.checkSyllablesLine(haiku.linesArray[2]));
