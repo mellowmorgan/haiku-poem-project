@@ -8,6 +8,6 @@ describe('Haiku', () => {
     i like you
     no i don't`;
     const haiku = new Haiku(chunk);
-    expect(this.linesArray.length).toEqual(3);
+    expect(haiku.linesArray.length).toEqual(3);
   });
 });
