@@ -1,31 +1,24 @@
-# (Application Name)
+# Haiku Checker
 
-#### (Brief Description of Application)
-
-#### By (Your Name Here)
+#### By Morgan Waites
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* Javascript
+* Jest
+* HTML/CSS/Bootstrap
 
 ## Description
 
+Checks to see if input is a haiku or not; please press enter for each line.
+
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-## Known Bugs
-
-* _Any known issues_
-* _should go here_
+* git clone this repo
+* navigate to top-level of directory
+* npm install
+* npm run start
+* npm test to run tests
 
 ## License
-
-## Contact Information
+[MIT](https://opensource.org/licenses/MIT) Copyright 2021 Morgan Waites.
